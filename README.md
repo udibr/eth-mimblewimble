@@ -32,6 +32,16 @@ In this case you will have to [install ZoKrates](https://zokrates.github.io/gett
 
 ## What does this project include
 
+To read the code, start from [Ethereum934.test.js](./tests/Ethereum934.test.js)
+and whenever the code reads a data set file
+(e.g. [deposit1](./tests/dataset/ethereum934/deposit1.json]))
+check how it was created in [sample.py](./sample.py) which will use one of the circuits
+([zkDeposit](./circuits/zkDeposit.zok))
+to generate a proof,
+using a docker container ([ethereum934/zk-deposit](./containers/zkDeposit.dockerfile)),
+that will be passed to one of the methods of the contract
+([Ethereum934.depositToMagicalWorld](./contracts/Ethereum934.sol)).
+
 1.  zk-SNARKs Circuits
 
     ```shell

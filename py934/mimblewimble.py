@@ -85,7 +85,7 @@ class Output:
                                                 auto_remove=True,
                                                 environment={"args": " ".join(map(str, [
                                                     self.tag,  # public
-                                                    self.v,
+                                                    self.v,  # public
                                                     self.r,
                                                 ]))})
             print('Calculated deposit proof in {} seconds'.format(time.time() - start))
